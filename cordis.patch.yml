@@ -1,0 +1,5 @@
+# dsh-dynamic-wallpaper profile patch layer — insert one loader entry for
+# the plugin package (same shape as dsh-skin).
+- insert:
+    - id: dynbg
+      name: 'dsh-dynamic-wallpaper'
