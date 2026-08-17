@@ -1,0 +1,14 @@
+{
+  "name": "dsh-dynamic-wallpaper",
+  "version": "1.0.0",
+  "description": "动态壁纸生成工具",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "canvas": "^3.2.3",
+    "gifencoder": "^2.0.1"
+  }
+}
