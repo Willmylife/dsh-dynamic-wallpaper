@@ -20,6 +20,10 @@
 	],
 	"type": "module",
 	"main": "lib/index.js",
+	"scripts": {
+		"test": "node test-draw.cjs",
+		"check": "node --check lib/client.js"
+	},
 	"exports": {
 		".": "./lib/index.js",
 		"./client": "./lib/client.js",
