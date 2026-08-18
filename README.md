@@ -15,6 +15,7 @@ DeepSeek Harness (DSH) 动态壁纸插件：在设置页提供 7 种内置 Canva
 | 雨幕 (rain) | 深夜落雨 |
 | 气泡 (bubbles) | 深海上浮气泡 |
 | 字符雨 (matrix) | 黑客帝国风数字雨 |
+| 极光 (aurora) | 流动极光帷幕与湖面倒影 |
 
 ## 功能
 
