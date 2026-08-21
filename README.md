@@ -1,6 +1,6 @@
 # dsh-dynamic-wallpaper
 
-DeepSeek Harness (DSH) 动态壁纸插件：在设置页提供 7 种内置 Canvas 动态壁纸 + 自定义视频背景，支持速度、密度、遮罩透明度、模糊调节，所有配置存入 localStorage，刷新不丢失。
+DeepSeek Harness (DSH) 动态壁纸插件：在设置页提供 8 种内置 Canvas 动态壁纸 + 自定义视频背景，支持速度、密度、遮罩透明度、模糊调节，所有配置存入 localStorage，刷新不丢失。
 
 灵感来自 [dsh-skin](https://github.com/KinGao294/dsh-skin)，采用相同的插件结构（浏览器侧实现 + cordis loader entry）。
 
@@ -19,8 +19,10 @@ DeepSeek Harness (DSH) 动态壁纸插件：在设置页提供 7 种内置 Canva
 
 ## 功能
 
-- **7 种内置动态壁纸**，全部 Canvas 渲染，无外部资源
-- **自定义视频**：粘贴 mp4/webm 等 http(s) 视频网址作为动态背景
+- **8 种内置动态壁纸**，全部 Canvas 渲染，无外部资源
+- **自定义视频**：粘贴可直接播放的 http(s) 视频网址，或导入本地 MP4 / WebM / OGV / MOV / M4V 文件作为动态背景
+- 本地文件通过浏览器临时 `blob:` URL 播放；刷新或重启 DSH web 后需要重新导入
+- 远程视频能通过格式校验不代表一定可播放：需要登录、依赖 Referer、防盗链或不允许跨域嵌入的来源可能加载失败
 - **速度 / 密度 / 遮罩 / 模糊** 四个滑杆实时调节
 - 动画透在主内容区和侧栏上，消息气泡保持不透明，不影响可读性
 - 页面隐藏时自动暂停动画/视频，省电
@@ -44,11 +46,15 @@ dsh web
 
 ## 开发
 
-修改 `lib/client.js` 后重启 web 服务器：
+修改 `lib/client.js` 后重启 web 服务器，并运行零依赖的语法与绘制烟雾测试：
 
 ```bash
+npm run check
+npm test
 dsh web
 ```
+
+`npm test` 会让每种内置壁纸在标准、最高与最低密度下完成 Canvas 绘制，捕获浏览器端绘制逻辑的运行时错误。
 
 ## License
 
