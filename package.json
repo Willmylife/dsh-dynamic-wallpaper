@@ -1,6 +1,6 @@
 {
 	"name": "dsh-dynamic-wallpaper",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"description": "Animated wallpaper plugin for DeepSeek Harness: 8 built-in canvas backgrounds (particles, meteor shower, starfield, waves, rain, bubbles, matrix, aurora) plus custom video import, with speed/density/opacity/blur controls and durable localStorage persistence",
 	"license": "MIT",
 	"author": "Willmylife",
